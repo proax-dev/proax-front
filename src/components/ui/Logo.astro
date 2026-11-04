@@ -1,0 +1,17 @@
+---
+import wordmark from '/public/proax-logo-dark.svg?raw'
+
+interface Props {
+  href: string
+}
+
+const { href } = Astro.props
+---
+
+<a href={href} class="flex items-center shrink-0" aria-label="proax">
+  <span
+    class="block h-7 [&>svg]:h-full [&>svg]:w-auto"
+    aria-hidden="true"
+    set:html={wordmark}
+  />
+</a>

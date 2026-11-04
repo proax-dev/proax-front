@@ -1,0 +1,13 @@
+.env*.local
+
+node_modules/
+.next/
+out/
+dist/
+.astro/
+.DS_Store
+
+.agents/
+.claude/
+skills-lock.json
+agent-browser-*

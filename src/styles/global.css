@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Montserrat', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --color-brand: #b4dc35;
+  --color-brand-light: #c9ee5a;
+  --color-brand-press: #9cc21f;
+  --color-canvas: #131b1e;
+  --color-surface: #1b2529;
+  --color-surface-2: #232f34;
+  --color-line: #2e3b41;
+  --color-line-strong: #3e4d54;
+  --color-ink: #ffffff;
+  --color-dim: #9ba7ad;
+  --color-faint: #6b777d;
+
+  --tracking-display: -0.03em;
+  --tracking-label: 0.14em;
+}
+
+@utility py-section {
+  padding-top: clamp(4rem, 3rem + 5vw, 10rem);
+  padding-bottom: clamp(4rem, 3rem + 5vw, 10rem);
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: var(--tracking-display);
+  }
+
+  ::selection {
+    background-color: var(--color-brand);
+    color: var(--color-canvas);
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+}
